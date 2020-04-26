@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --amplify-primary-color: #3959fd;
+  --amplify-primary-tint: #3959fd;
+  --amplify-primary-shade: #3959fd;
+}
