@@ -41,7 +41,7 @@ Amplify.configure(awsconfig);
     FormsModule,
     CommonModule,
     AmplifyUIAngularModule,
-    NgxGoogleAnalyticsModule.forRoot('UA-157507530-1')
+    NgxGoogleAnalyticsModule.forRoot(environment.trackingCode)
   ],
   providers: [{
     provide: RECAPTCHA_SETTINGS,
