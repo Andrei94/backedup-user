@@ -28,6 +28,7 @@
     "braintree-web-drop-in": "^1.22.1",
     "jquery": "^3.4.1",
     "ngx-google-analytics": "^8.0.0",
+    "ng-recaptcha": "5.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

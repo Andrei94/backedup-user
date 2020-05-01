@@ -16,6 +16,9 @@ import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {CommonModule} from '@angular/common';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
+import {ContactUsComponent} from './contact-us/contact-us.component';
+import {environment} from '../environments/environment';
+import {RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings} from 'ng-recaptcha';
 
 Amplify.configure(awsconfig);
 
@@ -26,17 +29,26 @@ Amplify.configure(awsconfig);
     AuthenticationComponent,
     PaymentComponent,
     DeleteAccountConfirmationComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
     HttpClientModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     FormsModule,
     CommonModule,
     AmplifyUIAngularModule,
     NgxGoogleAnalyticsModule.forRoot('UA-157507530-1')
   ],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      siteKey: environment.siteKey,
+    } as RecaptchaSettings,
+  }],
   bootstrap: [AppComponent],
   entryComponents: [DeleteAccountConfirmationComponent]
 })
