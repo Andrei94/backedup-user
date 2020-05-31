@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201",
+    "start-aws-test": "ng serve --port 4201 -c awstest",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

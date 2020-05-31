@@ -101,6 +101,9 @@
           "configurations": {
             "production": {
               "browserTarget": "backedup-user:build:production"
+            },
+            "awstest": {
+              "browserTarget": "backedup-user:build:awstest"
             }
           }
         },
